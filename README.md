@@ -19,8 +19,11 @@ Registro detallado de todas las multas y penalidades aplicadas.
 Almacenamiento completo del historial de pagos y comportamiento financiero de cada cliente.
 Evaluación y asignación de un puntaje de crédito basado en su historial de pagos.
 Consulta rápida del estado de deudas, multas y ahorros de cada cliente.
-5. Usuario:
+
+5. Usuario para entrar al sistema:
+   
 Usuario: admin
+
 Contraseña: 0000
 
 Requisitos del Sistema
