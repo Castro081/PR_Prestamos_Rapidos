@@ -228,6 +228,7 @@
     <Compile Include="Modales\mdTipoMoneda.Designer.cs">
       <DependentUpon>mdTipoMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Ahorro.cs" />
     <Compile Include="Modelo\Clientes.cs" />
     <Compile Include="Modelo\Cuota.cs" />
     <Compile Include="Modelo\Datos.cs" />

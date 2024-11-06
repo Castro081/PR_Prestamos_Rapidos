@@ -93,6 +93,20 @@ namespace ProyectoPrestamo
             form.ShowDialog();
         }
 
-       
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            frmAhorro frm = new frmAhorro();
+            frm.Show();
+            this.Hide();
+            frm.FormClosing += Frm_Closing;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            frmHistorialAhorro frm = new frmHistorialAhorro();
+            frm.Show();
+            this.Hide();
+            frm.FormClosing += Frm_Closing;
+        }
     }
 }

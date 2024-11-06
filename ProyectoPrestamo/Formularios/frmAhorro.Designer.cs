@@ -33,7 +33,6 @@
             this.btnAhorrar = new FontAwesome.Sharp.IconButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtidcuota = new System.Windows.Forms.TextBox();
             this.txtimportepagar = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtfechalimite = new System.Windows.Forms.TextBox();
@@ -42,6 +41,10 @@
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtmontoprestamo = new System.Windows.Forms.TextBox();
+            this.txtfechainicio = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbotipomoneda = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,10 +70,6 @@
             this.btnbuscar = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbotipomoneda = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtfechainicio = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,6 +92,7 @@
             this.btnvolver.Text = "Volver";
             this.btnvolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
             // 
             // txtidprestamo
             // 
@@ -119,12 +119,12 @@
             this.btnAhorrar.Text = "Ahorrar";
             this.btnAhorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAhorrar.UseVisualStyleBackColor = true;
+            this.btnAhorrar.Click += new System.EventHandler(this.btnAhorrar_Click);
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.White;
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Controls.Add(this.txtidcuota);
             this.groupBox5.Controls.Add(this.txtimportepagar);
             this.groupBox5.Controls.Add(this.label26);
             this.groupBox5.Controls.Add(this.txtfechalimite);
@@ -137,6 +137,7 @@
             this.groupBox5.TabIndex = 92;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "INFORMACIÓN DE AHORRO";
+            this.groupBox5.Visible = false;
             // 
             // groupBox6
             // 
@@ -145,15 +146,6 @@
             this.groupBox6.Size = new System.Drawing.Size(116, 10);
             this.groupBox6.TabIndex = 60;
             this.groupBox6.TabStop = false;
-            // 
-            // txtidcuota
-            // 
-            this.txtidcuota.Location = new System.Drawing.Point(103, 14);
-            this.txtidcuota.Name = "txtidcuota";
-            this.txtidcuota.Size = new System.Drawing.Size(25, 20);
-            this.txtidcuota.TabIndex = 63;
-            this.txtidcuota.Text = "0";
-            this.txtidcuota.Visible = false;
             // 
             // txtimportepagar
             // 
@@ -215,11 +207,11 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.txtmontoprestamo);
             this.groupBox3.Controls.Add(this.txtfechainicio);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.cbotipomoneda);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtmontoprestamo);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(22, 272);
@@ -231,11 +223,50 @@
             // 
             // txtmontoprestamo
             // 
-            this.txtmontoprestamo.Location = new System.Drawing.Point(80, 52);
+            this.txtmontoprestamo.BackColor = System.Drawing.Color.White;
+            this.txtmontoprestamo.Location = new System.Drawing.Point(83, 52);
             this.txtmontoprestamo.Name = "txtmontoprestamo";
-            this.txtmontoprestamo.ReadOnly = true;
-            this.txtmontoprestamo.Size = new System.Drawing.Size(116, 20);
-            this.txtmontoprestamo.TabIndex = 86;
+            this.txtmontoprestamo.Size = new System.Drawing.Size(106, 20);
+            this.txtmontoprestamo.TabIndex = 66;
+            // 
+            // txtfechainicio
+            // 
+            this.txtfechainicio.CustomFormat = "dd/MM/yyyy";
+            this.txtfechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtfechainicio.Location = new System.Drawing.Point(83, 154);
+            this.txtfechainicio.Name = "txtfechainicio";
+            this.txtfechainicio.Size = new System.Drawing.Size(97, 20);
+            this.txtfechainicio.TabIndex = 89;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(80, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "Fecha Inicio:";
+            // 
+            // cbotipomoneda
+            // 
+            this.cbotipomoneda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbotipomoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotipomoneda.FormattingEnabled = true;
+            this.cbotipomoneda.Location = new System.Drawing.Point(83, 101);
+            this.cbotipomoneda.Name = "cbotipomoneda";
+            this.cbotipomoneda.Size = new System.Drawing.Size(106, 21);
+            this.cbotipomoneda.TabIndex = 88;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(80, 85);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.TabIndex = 87;
+            this.label14.Text = "Tipo Moneda:";
             // 
             // label13
             // 
@@ -455,6 +486,7 @@
             this.btnborrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnborrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click_1);
             // 
             // rbdocumentocliente
             // 
@@ -482,6 +514,7 @@
             this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click_1);
             // 
             // label2
             // 
@@ -507,45 +540,6 @@
             this.label1.Size = new System.Drawing.Size(740, 416);
             this.label1.TabIndex = 87;
             // 
-            // cbotipomoneda
-            // 
-            this.cbotipomoneda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbotipomoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbotipomoneda.FormattingEnabled = true;
-            this.cbotipomoneda.Location = new System.Drawing.Point(83, 101);
-            this.cbotipomoneda.Name = "cbotipomoneda";
-            this.cbotipomoneda.Size = new System.Drawing.Size(106, 21);
-            this.cbotipomoneda.TabIndex = 88;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(80, 85);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
-            this.label14.TabIndex = 87;
-            this.label14.Text = "Tipo Moneda:";
-            // 
-            // txtfechainicio
-            // 
-            this.txtfechainicio.CustomFormat = "dd/MM/yyyy";
-            this.txtfechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtfechainicio.Location = new System.Drawing.Point(83, 154);
-            this.txtfechainicio.Name = "txtfechainicio";
-            this.txtfechainicio.Size = new System.Drawing.Size(97, 20);
-            this.txtfechainicio.TabIndex = 89;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(80, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Fecha Inicio:";
-            // 
             // frmAhorro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,6 +557,7 @@
             this.Name = "frmAhorro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAhorro";
+            this.Load += new System.EventHandler(this.frmAhorro_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -583,7 +578,6 @@
         private FontAwesome.Sharp.IconButton btnAhorrar;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox txtidcuota;
         private System.Windows.Forms.TextBox txtimportepagar;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtfechalimite;
@@ -591,7 +585,6 @@
         private System.Windows.Forms.TextBox txtcuotapagar;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtmontoprestamo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -621,5 +614,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker txtfechainicio;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtmontoprestamo;
     }
 }

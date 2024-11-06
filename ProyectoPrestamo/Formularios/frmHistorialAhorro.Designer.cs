@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvahorro = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAhorrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtidprestamo = new System.Windows.Forms.TextBox();
-            this.btncancelar = new FontAwesome.Sharp.IconButton();
             this.btnvolver = new FontAwesome.Sharp.IconButton();
             this.btndescargarresumen = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,39 +61,27 @@
             this.btnbuscar = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtmontoxcuota = new System.Windows.Forms.TextBox();
-            this.txtmontototalpagar = new System.Windows.Forms.TextBox();
-            this.txtmontoprestamo = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.txtnumerooperacion = new System.Windows.Forms.TextBox();
-            this.rbnumerooperacion = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.lblestadoprestamo = new System.Windows.Forms.Label();
             this.lblnrooperacion = new System.Windows.Forms.Label();
+            this.lblestadoprestamo = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbnumerooperacion = new System.Windows.Forms.RadioButton();
+            this.txtnumerooperacion = new System.Windows.Forms.TextBox();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAhorrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbotipomoneda = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtfechainicio = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.AhorroTotal = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvahorro)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -114,15 +105,15 @@
             // 
             this.dgvahorro.AllowUserToAddRows = false;
             this.dgvahorro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvahorro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvahorro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvahorro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvahorro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -133,13 +124,48 @@
             this.dgvahorro.MultiSelect = false;
             this.dgvahorro.Name = "dgvahorro";
             this.dgvahorro.ReadOnly = true;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dgvahorro.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dgvahorro.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvahorro.RowTemplate.Height = 24;
             this.dgvahorro.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvahorro.Size = new System.Drawing.Size(479, 278);
             this.dgvahorro.TabIndex = 89;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            this.Monto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Monto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Monto.Width = 90;
+            // 
+            // FechaPago
+            // 
+            this.FechaPago.HeaderText = "Fecha ";
+            this.FechaPago.Name = "FechaPago";
+            this.FechaPago.ReadOnly = true;
+            this.FechaPago.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FechaPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.FechaPago.Width = 90;
+            // 
+            // TotalAhorrado
+            // 
+            this.TotalAhorrado.HeaderText = "Total Ahorrado";
+            this.TotalAhorrado.Name = "TotalAhorrado";
+            this.TotalAhorrado.ReadOnly = true;
+            this.TotalAhorrado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TotalAhorrado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // txtidprestamo
             // 
@@ -149,23 +175,6 @@
             this.txtidprestamo.TabIndex = 100;
             this.txtidprestamo.Text = "0";
             this.txtidprestamo.Visible = false;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.btncancelar.IconColor = System.Drawing.Color.Black;
-            this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btncancelar.IconSize = 50;
-            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btncancelar.Location = new System.Drawing.Point(724, 448);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(106, 83);
-            this.btncancelar.TabIndex = 108;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btncancelar.UseVisualStyleBackColor = true;
             // 
             // btnvolver
             // 
@@ -183,6 +192,7 @@
             this.btnvolver.Text = "Volver";
             this.btnvolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
             // 
             // btndescargarresumen
             // 
@@ -200,6 +210,7 @@
             this.btndescargarresumen.Text = "Descargar";
             this.btndescargarresumen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btndescargarresumen.UseVisualStyleBackColor = true;
+            this.btndescargarresumen.Click += new System.EventHandler(this.btndescargarresumen_Click);
             // 
             // groupBox1
             // 
@@ -387,6 +398,7 @@
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // rbdocumentocliente
             // 
@@ -414,6 +426,7 @@
             this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label2
             // 
@@ -439,16 +452,6 @@
             this.label1.Size = new System.Drawing.Size(1010, 481);
             this.label1.TabIndex = 101;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(32, 48);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(87, 13);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Monto Prestamo:";
-            // 
             // groupBox4
             // 
             this.groupBox4.Location = new System.Drawing.Point(14, 116);
@@ -457,49 +460,15 @@
             this.groupBox4.TabIndex = 59;
             this.groupBox4.TabStop = false;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(84, 148);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 13);
-            this.label16.TabIndex = 60;
-            this.label16.Text = "Multa:";
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(250, 148);
+            this.label25.Location = new System.Drawing.Point(33, 49);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(103, 13);
             this.label25.TabIndex = 62;
             this.label25.Text = "Monto Total ahorrar:";
-            // 
-            // txtmontoxcuota
-            // 
-            this.txtmontoxcuota.Location = new System.Drawing.Point(87, 164);
-            this.txtmontoxcuota.Name = "txtmontoxcuota";
-            this.txtmontoxcuota.ReadOnly = true;
-            this.txtmontoxcuota.Size = new System.Drawing.Size(116, 20);
-            this.txtmontoxcuota.TabIndex = 80;
-            // 
-            // txtmontototalpagar
-            // 
-            this.txtmontototalpagar.Location = new System.Drawing.Point(253, 164);
-            this.txtmontototalpagar.Name = "txtmontototalpagar";
-            this.txtmontototalpagar.ReadOnly = true;
-            this.txtmontototalpagar.Size = new System.Drawing.Size(104, 20);
-            this.txtmontototalpagar.TabIndex = 82;
-            // 
-            // txtmontoprestamo
-            // 
-            this.txtmontoprestamo.Location = new System.Drawing.Point(35, 64);
-            this.txtmontoprestamo.Name = "txtmontoprestamo";
-            this.txtmontoprestamo.ReadOnly = true;
-            this.txtmontoprestamo.Size = new System.Drawing.Size(116, 20);
-            this.txtmontoprestamo.TabIndex = 86;
             // 
             // label34
             // 
@@ -534,53 +503,54 @@
             this.groupBox10.TabIndex = 103;
             this.groupBox10.TabStop = false;
             // 
-            // iconButton8
+            // lblnrooperacion
             // 
-            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton8.IconColor = System.Drawing.Color.Black;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 19;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton8.Location = new System.Drawing.Point(447, 17);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(37, 23);
-            this.iconButton8.TabIndex = 10;
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton8.UseVisualStyleBackColor = true;
+            this.lblnrooperacion.AutoSize = true;
+            this.lblnrooperacion.BackColor = System.Drawing.Color.White;
+            this.lblnrooperacion.Location = new System.Drawing.Point(629, 23);
+            this.lblnrooperacion.Name = "lblnrooperacion";
+            this.lblnrooperacion.Size = new System.Drawing.Size(43, 13);
+            this.lblnrooperacion.TabIndex = 91;
+            this.lblnrooperacion.Text = "000000";
             // 
-            // txtnumerooperacion
+            // lblestadoprestamo
             // 
-            this.txtnumerooperacion.BackColor = System.Drawing.Color.White;
-            this.txtnumerooperacion.Location = new System.Drawing.Point(101, 19);
-            this.txtnumerooperacion.Name = "txtnumerooperacion";
-            this.txtnumerooperacion.Size = new System.Drawing.Size(100, 20);
-            this.txtnumerooperacion.TabIndex = 0;
+            this.lblestadoprestamo.AutoSize = true;
+            this.lblestadoprestamo.BackColor = System.Drawing.Color.White;
+            this.lblestadoprestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblestadoprestamo.Location = new System.Drawing.Point(793, 20);
+            this.lblestadoprestamo.Name = "lblestadoprestamo";
+            this.lblestadoprestamo.Size = new System.Drawing.Size(78, 15);
+            this.lblestadoprestamo.TabIndex = 97;
+            this.lblestadoprestamo.Text = "EN CURSO";
             // 
-            // rbnumerooperacion
+            // textBox14
             // 
-            this.rbnumerooperacion.AutoSize = true;
-            this.rbnumerooperacion.Checked = true;
-            this.rbnumerooperacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbnumerooperacion.Location = new System.Drawing.Point(9, 20);
-            this.rbnumerooperacion.Name = "rbnumerooperacion";
-            this.rbnumerooperacion.Size = new System.Drawing.Size(92, 17);
-            this.rbnumerooperacion.TabIndex = 11;
-            this.rbnumerooperacion.TabStop = true;
-            this.rbnumerooperacion.Text = "Nº Operación:";
-            this.rbnumerooperacion.UseVisualStyleBackColor = true;
+            this.textBox14.BackColor = System.Drawing.Color.White;
+            this.textBox14.Location = new System.Drawing.Point(340, 19);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 65;
             // 
-            // radioButton1
+            // label32
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Location = new System.Drawing.Point(208, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(133, 17);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.Text = "Nº Documento Cliente:";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(701, 22);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(90, 13);
+            this.label32.TabIndex = 96;
+            this.label32.Text = "Estado Préstamo:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(554, 22);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(74, 13);
+            this.label33.TabIndex = 90;
+            this.label33.Text = "Nº Operación:";
             // 
             // iconButton7
             // 
@@ -598,54 +568,53 @@
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = true;
             // 
-            // label33
+            // radioButton1
             // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(554, 22);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(74, 13);
-            this.label33.TabIndex = 90;
-            this.label33.Text = "Nº Operación:";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButton1.Location = new System.Drawing.Point(208, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(133, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.Text = "Nº Documento Cliente:";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label32
+            // rbnumerooperacion
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(701, 22);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(90, 13);
-            this.label32.TabIndex = 96;
-            this.label32.Text = "Estado Préstamo:";
+            this.rbnumerooperacion.AutoSize = true;
+            this.rbnumerooperacion.Checked = true;
+            this.rbnumerooperacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbnumerooperacion.Location = new System.Drawing.Point(9, 20);
+            this.rbnumerooperacion.Name = "rbnumerooperacion";
+            this.rbnumerooperacion.Size = new System.Drawing.Size(92, 17);
+            this.rbnumerooperacion.TabIndex = 11;
+            this.rbnumerooperacion.TabStop = true;
+            this.rbnumerooperacion.Text = "Nº Operación:";
+            this.rbnumerooperacion.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // txtnumerooperacion
             // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
-            this.textBox14.Location = new System.Drawing.Point(340, 19);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 65;
+            this.txtnumerooperacion.BackColor = System.Drawing.Color.White;
+            this.txtnumerooperacion.Location = new System.Drawing.Point(101, 19);
+            this.txtnumerooperacion.Name = "txtnumerooperacion";
+            this.txtnumerooperacion.Size = new System.Drawing.Size(100, 20);
+            this.txtnumerooperacion.TabIndex = 0;
             // 
-            // lblestadoprestamo
+            // iconButton8
             // 
-            this.lblestadoprestamo.AutoSize = true;
-            this.lblestadoprestamo.BackColor = System.Drawing.Color.White;
-            this.lblestadoprestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblestadoprestamo.Location = new System.Drawing.Point(793, 20);
-            this.lblestadoprestamo.Name = "lblestadoprestamo";
-            this.lblestadoprestamo.Size = new System.Drawing.Size(78, 15);
-            this.lblestadoprestamo.TabIndex = 97;
-            this.lblestadoprestamo.Text = "EN CURSO";
-            // 
-            // lblnrooperacion
-            // 
-            this.lblnrooperacion.AutoSize = true;
-            this.lblnrooperacion.BackColor = System.Drawing.Color.White;
-            this.lblnrooperacion.Location = new System.Drawing.Point(629, 23);
-            this.lblnrooperacion.Name = "lblnrooperacion";
-            this.lblnrooperacion.Size = new System.Drawing.Size(43, 13);
-            this.lblnrooperacion.TabIndex = 91;
-            this.lblnrooperacion.Text = "000000";
+            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton8.IconColor = System.Drawing.Color.Black;
+            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton8.IconSize = 19;
+            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconButton8.Location = new System.Drawing.Point(447, 17);
+            this.iconButton8.Name = "iconButton8";
+            this.iconButton8.Size = new System.Drawing.Size(37, 23);
+            this.iconButton8.TabIndex = 10;
+            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton8.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -727,10 +696,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.txtfechainicio);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.cbotipomoneda);
-            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.AhorroTotal);
             this.groupBox3.Controls.Add(this.iconButton1);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.iconButton3);
@@ -738,13 +704,8 @@
             this.groupBox3.Controls.Add(this.iconButton5);
             this.groupBox3.Controls.Add(this.groupBox10);
             this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.txtmontoprestamo);
-            this.groupBox3.Controls.Add(this.txtmontototalpagar);
-            this.groupBox3.Controls.Add(this.txtmontoxcuota);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(15, 311);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(484, 220);
@@ -752,79 +713,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "INFORMACIÓN DEL AHORRO";
             // 
-            // Id
+            // AhorroTotal
             // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id.Visible = false;
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Monto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Monto.Width = 90;
-            // 
-            // FechaPago
-            // 
-            this.FechaPago.HeaderText = "Fecha ";
-            this.FechaPago.Name = "FechaPago";
-            this.FechaPago.ReadOnly = true;
-            this.FechaPago.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FechaPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FechaPago.Width = 90;
-            // 
-            // TotalAhorrado
-            // 
-            this.TotalAhorrado.HeaderText = "Total Ahorrado";
-            this.TotalAhorrado.Name = "TotalAhorrado";
-            this.TotalAhorrado.ReadOnly = true;
-            this.TotalAhorrado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TotalAhorrado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // cbotipomoneda
-            // 
-            this.cbotipomoneda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbotipomoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbotipomoneda.FormattingEnabled = true;
-            this.cbotipomoneda.Location = new System.Drawing.Point(176, 64);
-            this.cbotipomoneda.Name = "cbotipomoneda";
-            this.cbotipomoneda.Size = new System.Drawing.Size(106, 21);
-            this.cbotipomoneda.TabIndex = 112;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(173, 48);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 13);
-            this.label11.TabIndex = 111;
-            this.label11.Text = "Tipo Moneda:";
-            // 
-            // txtfechainicio
-            // 
-            this.txtfechainicio.CustomFormat = "dd/MM/yyyy";
-            this.txtfechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtfechainicio.Location = new System.Drawing.Point(310, 64);
-            this.txtfechainicio.Name = "txtfechainicio";
-            this.txtfechainicio.Size = new System.Drawing.Size(97, 20);
-            this.txtfechainicio.TabIndex = 113;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(307, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 114;
-            this.label4.Text = "Fecha Inicio:";
+            this.AhorroTotal.BackColor = System.Drawing.Color.White;
+            this.AhorroTotal.Location = new System.Drawing.Point(36, 74);
+            this.AhorroTotal.Name = "AhorroTotal";
+            this.AhorroTotal.Size = new System.Drawing.Size(100, 20);
+            this.AhorroTotal.TabIndex = 66;
             // 
             // frmHistorialAhorro
             // 
@@ -833,7 +728,6 @@
             this.ClientSize = new System.Drawing.Size(1027, 550);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.txtidprestamo);
-            this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btndescargarresumen);
             this.Controls.Add(this.groupBox3);
@@ -862,7 +756,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvahorro;
         private System.Windows.Forms.TextBox txtidprestamo;
-        private FontAwesome.Sharp.IconButton btncancelar;
         private FontAwesome.Sharp.IconButton btnvolver;
         private FontAwesome.Sharp.IconButton btndescargarresumen;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -887,13 +780,8 @@
         private FontAwesome.Sharp.IconButton btnbuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtmontoxcuota;
-        private System.Windows.Forms.TextBox txtmontototalpagar;
-        private System.Windows.Forms.TextBox txtmontoprestamo;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label lblnrooperacion;
@@ -916,9 +804,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAhorrado;
-        private System.Windows.Forms.ComboBox cbotipomoneda;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker txtfechainicio;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox AhorroTotal;
     }
 }
